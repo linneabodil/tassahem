@@ -1,13 +1,17 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+  <div class="need-home">
+    <AnimalList />
   </div>
 </template>
 
 <script>
+import AnimalList from '@/components/AnimalList.vue'
 
 export default {
-  name: 'need-home'
+  name: 'need-home',
+  components: {
+    AnimalList
+  }
 }
 
 </script>
