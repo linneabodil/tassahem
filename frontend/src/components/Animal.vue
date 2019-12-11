@@ -1,10 +1,11 @@
 <template>
   <li class="animal">
-    <img class="animal__img" src="https://images.unsplash.com/photo-1516374348294-ce51573b0fb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="Bild på djuret som söker hem.">
-    <div class="animal__text-container">
-      <h2 class="animal__name">{{ animal.name }}</h2>
+    <img class="animal__img" :src="animal.img" alt="Bild på djuret som söker hem.">
+    <div class="animal__text-container" :class="animal.category">
+      <h2 class="animal__name">{{ animal.name }}, {{ animal.age }}</h2>
       <div class="animal__icons">
-        
+        <img :src="require('../assets/' + animal.category + '.svg')" alt="">
+        <img :src="require('../assets/' + animal.gender + '.svg')" alt="">
       </div>
     </div>
   </li>
@@ -18,19 +19,34 @@ export default {
 </script>
 
 <style lang="scss">
-
 .animal {
-  margin: 0;
-  width: 100%;
+  height: 300px;
   list-style: none;
 
   &__img {
+    width: 100%;
   }
 
   &__text-container {
     padding: .5rem 1rem;
-    background: #4B8E8D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.dog {
+      background: #4B8E8D;
+    }
+    &.cat {
+      background: #C3377E;
+    }
+
+    .animal__icons {
+      display: block;
+
+      img {
+        margin: 5px;
+      }
+    }
   }
 }
-
 </style>

@@ -15,8 +15,14 @@ export default {
   data() {
     return {
       animals: [
-        {name: 'Bonnie', age: '11 månader'},
-        {name: 'Rutti', age: '2 år'}
+        {name: 'Bonnie',
+        age: '11 månader',
+        category: 'dog',
+        gender: 'female',
+        img: 'https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'},
+        {name: 'Rutti', age: '2 år', category: 'cat', gender: 'female',
+        img: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80'},
+        {name: 'Stells', age: '1 år', category: 'cat', gender: 'female'}
       ]
     }
   }
@@ -27,7 +33,8 @@ export default {
 
 .animal-list {
   display: grid;
-  grid-template-columns: 1fr, 3;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: .5rem;
 }
 
 </style>
