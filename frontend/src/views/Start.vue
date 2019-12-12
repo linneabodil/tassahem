@@ -1,12 +1,12 @@
 <template>
   <div class="page">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Nav/>
     <picture>
       <img id="hero" alt="Dogs" src="../assets/img/hero.jpg">
     </picture>
 
     <TextBox 
-      rubrik="rubrik" 
+      rubrik="Vilka är vi?" 
       info="Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
       Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
@@ -14,11 +14,13 @@
       Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
       Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
-      condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."/>
+      condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."
+      btn="information"/>
+      
       <img class="picture" alt="Wolf Dog" src="../assets/img/dog-wolf.jpg">
 
-      <TextBox 
-      rubrik="rubrik 2" 
+      <TextBox style="font-color: black; background-color: white;"
+      rubrik="Dom fyrbenta vännerna" 
       info="Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
       Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
@@ -26,12 +28,14 @@
       Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
       Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
-      condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."/>
+      condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."
+      btn="soker-hem"
+      />
 
       <img class="picture" alt="Children and dog" src="../assets/img/children-dog.jpg">
 
       <TextBox 
-      rubrik="rubrik 3" 
+      rubrik="Vill du låta någon tassa hem till dig?" 
       info="Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
       Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
@@ -39,12 +43,14 @@
       Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
       Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
-      condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."/>
+      condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."
+      btn="kontakt"
+      />
 
       <img class="picture" alt="Dog walker" src="../assets/img/dogwalker.jpg">
 
-      <TextBox 
-      rubrik="rubrik 4" 
+      <TextBox style="color: black; background-color: white;" 
+      rubrik="Våra solskenshistorier" 
       info="Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
       Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
@@ -52,7 +58,9 @@
       Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
       Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
-      condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."/>
+      condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."
+      btn="hittat-hem"
+      />
 
       <img class="picture" alt="Hand reaching for cat" src="../assets/img/cat-hand.jpg">
   </div>
@@ -63,16 +71,16 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import TextBox from '@/components/TextBox.vue'
+import Nav from '@/components/Nav.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld,
-    TextBox
+    TextBox,
+    Nav
   }
-}
+} 
 </script>
 
 <style scoped lang="scss">
@@ -80,10 +88,12 @@ export default {
 #hero {
   height: 90vh;
   width: 100%;
+  object-fit: cover;  
 }
 .picture{
   height: 400px;
   width: 100%;
+  object-fit: cover;
 }
 
 </style>
