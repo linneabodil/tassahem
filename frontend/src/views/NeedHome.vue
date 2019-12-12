@@ -1,13 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    {{ animals }}
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'need-home'
+  name: 'need-home',
+  computed:{
+    animals(){
+      let animals = this.$store.getters.getAnimals;
+      return animals;
+    }
+  }
 }
 
 </script>

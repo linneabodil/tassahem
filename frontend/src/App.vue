@@ -10,8 +10,18 @@
       <router-link to="/logga-in">Logga in</router-link>
     </div>
     <router-view/>
+    
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'app',
+    beforeMount(){
+      this.$store.dispatch('getAllAnimals')
+    }
+  }
+</script>
 
 <style lang="scss">
 
