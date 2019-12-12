@@ -28,5 +28,5 @@ app.listen(port, () => {
     console.info('Du tassar in :)')
 });
 
-app.route('/animal')
+app.route('/animals')
 .get(animal.get)

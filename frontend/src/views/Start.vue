@@ -79,6 +79,7 @@ export default {
 
 #hero {
   height: 90vh;
+  width: 100%;
 }
 .picture{
   height: 400px;
