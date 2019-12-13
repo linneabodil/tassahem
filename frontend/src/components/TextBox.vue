@@ -1,19 +1,23 @@
 <template>
-  <div class="petrolBox">
+  <div class="box">
     <h1>{{ rubrik }}</h1>
     <p>
       {{ info }}
     </p>
-    <button class="more"><h2>Läs Mer</h2></button>
+    <router-link :to="'/' + btn">
+      <button class="more"><h2>Läs Mer</h2></button>
+    </router-link> 
   </div>
 </template>
+
 
 <script>
 export default {
   name: 'TextBox',
   props: {
     rubrik: String,
-    info: String
+    info: String,
+    btn: String
   }
 }
 </script>
@@ -23,15 +27,16 @@ export default {
 $petrol: #4B8E8D;
 $pink: #C3377E;
 $orange: #F59039; 
-  .petrolBox{
+
+*{
+  color: white;
+}
+
+  .box{
     background: $petrol;
     text-align: center;
     padding: 2rem;
-
-    p, h1,h2{
-      color: white;
-    }
-
+    
     h1{
       font-family: Bebas Neue;
       font-size: 36px;
@@ -52,7 +57,7 @@ $orange: #F59039;
       margin-top: 2rem;
 
       h2{
-        margin: .4rem;
+        margin: .5rem;
       }
     }
   }

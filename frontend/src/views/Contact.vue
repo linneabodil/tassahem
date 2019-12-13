@@ -1,13 +1,17 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <Nav/>
   </div>
 </template>
 
 <script>
+import Nav from '@/components/Nav.vue'
 
 export default {
-  name: 'contact'
+  name: 'contact',
+  components: {
+    Nav
+  }
 }
 
 </script>
