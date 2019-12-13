@@ -17,6 +17,9 @@ export default new Vuex.Store({
     async getAllAnimals(ctx){
       let animals = await axios.get('http://localhost:3000/animals')
       await ctx.commit('setAnimals', animals.data);
+    },
+    async createAnimal(ctx, animal) {
+      await axios.post('http://localhost:3000/animals', animal);
     }
   },
   modules: {

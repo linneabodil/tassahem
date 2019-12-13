@@ -9,3 +9,14 @@ module.exports.get = async (req, res) => {
     res.status(500).send(err.stack);
   }
 };
+
+// post animals
+module.exports.post = async (req, res) => {
+  try {
+    console.log(req)
+    res.status(200).send(await Animal.create(req.body));
+  }
+  catch (err) {
+    res.status(500).send(err.stack);
+  }
+};
