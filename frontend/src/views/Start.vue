@@ -1,6 +1,5 @@
 <template>
   <div class="page">
-    <Nav/>
     <picture>
       <img id="hero" alt="Dogs" src="../assets/img/hero.jpg">
     </picture>
@@ -72,13 +71,11 @@
 <script>
 // @ is an alias to /src
 import TextBox from '@/components/TextBox.vue'
-import Nav from '@/components/Nav.vue'
 
 export default {
   name: 'home',
   components: {
-    TextBox,
-    Nav
+    TextBox
   }
 } 
 </script>
