@@ -1,6 +1,6 @@
 <template>
   <div class="need-home">
-    <AnimalList />
+    <AnimalList :animals="animals" />
   </div>
 </template>
 
@@ -9,8 +9,11 @@ import AnimalList from '@/components/AnimalList.vue'
 
 export default {
   name: 'need-home',
+  components: {
+    AnimalList
+  },
   computed:{
-    animals(){
+    animals() {
       let animals = this.$store.getters.getAnimals;
       return animals;
     }

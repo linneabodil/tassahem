@@ -2,7 +2,7 @@
   <li class="animal">
     <img class="animal__img" :src="animal.img" alt="Bild på djuret som söker hem.">
     <div class="animal__text-container" :class="animal.category">
-      <h2 class="animal__name">{{ animal.name }}, {{ animal.age }}</h2>
+      <h2 class="animal__name">{{ animal.name }}, {{ animal.born.slice(0,10) }}</h2>
       <div class="animal__icons">
         <img :src="require('../assets/' + animal.category + '.svg')" alt="">
         <img :src="require('../assets/' + animal.gender + '.svg')" alt="">
@@ -28,6 +28,7 @@ export default {
   }
 
   &__text-container {
+    margin-top: -4px;
     padding: .5rem 1rem;
     display: flex;
     justify-content: space-between;
@@ -38,6 +39,12 @@ export default {
     }
     &.cat {
       background: #C3377E;
+    }
+
+    .animal__name {
+      font-family: 'Bebas Neue';
+      letter-spacing: 2px;
+      color: White;
     }
 
     .animal__icons {
