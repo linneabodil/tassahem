@@ -9,7 +9,9 @@ let animalSchema = new Schema({
   description: String,
   needs: Array,
   born: Date,
-  gender: String
+  gender: String,
+  status: String,
+  img: String
 });
 
 let Animal = mongoose.model('animal', animalSchema);
