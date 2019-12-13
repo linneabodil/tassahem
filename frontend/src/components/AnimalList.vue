@@ -15,13 +15,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-
-.animal-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: .5rem;
-}
-
-</style>
