@@ -1,14 +1,48 @@
 <template>
   <div class="home">
-  </div>
+  <img class="picture" alt="Wolf Dog" src="../assets/img/poodle.jpg">
+    <NoButtonTextBox 
+    rubrik="Att tassa hem..." 
+    info="Nulla neque est a, lectus sociis natoque vestibulum. 
+    Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
+    Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+    condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae.
+    Nulla neque est a, lectus sociis natoque vestibulum. 
+    Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
+    Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+    condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."/>
+
+    <NoButtonTextBox style="background: white; color: black;"
+    rubrik="Att tassa hem..." 
+    info="Nulla neque est a, lectus sociis natoque vestibulum. 
+    Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
+    Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim."/>
+  
+    <NoButtonTextBox style="background: #C3377E;"
+    rubrik="Att tassa hem..." 
+    info="Nulla neque est a, lectus sociis natoque vestibulum. 
+    Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
+    Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+    condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae.
+    Nulla neque est a, lectus sociis natoque vestibulum. 
+    Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
+    Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+    condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."/>
+    <img class="picture" alt="Wolf Dog" src="../assets/img/happy-dog.jpg">
+    </div>
 </template>
 
 <script>
+import NoButtonTextBox from '@/components/NoButtonTextBox.vue'
 export default {
   name: 'information',
   components: {
+    NoButtonTextBox
   }
 }
 
-
 </script>
+
+<style scoped lang="scss">
+
+</style>
