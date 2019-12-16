@@ -1,5 +1,5 @@
 <template>
-  <li class="animal">
+  <li class="animal" @click="selectAnimal(animal)">
     <img class="animal__img" :src="animal.img" alt="Bild på djuret som söker hem.">
     <div class="animal__text-container" :class="animal.category">
       <h2 class="animal__name">{{ animal.name }}, {{ animal.born.slice(0,10) }}</h2>
@@ -14,6 +14,12 @@
 <script>
 export default {
   name: 'Animal',
-  props: ['animal']
+  props: ['animal'],
+  methods: {
+    selectAnimal(animal) {
+      this.$store.commit('selectAnimal', animal);
+      this.$router.push('/animalcard');
+    }
+  }
 }
 </script>

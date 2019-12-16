@@ -6,9 +6,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    animal: {},
     animals: []
   },
   mutations: {
+    selectAnimal(state, animal) {
+      state.animal = animal;
+    },
     setAnimals(state, animals) {
       state.animals = animals;
     }
