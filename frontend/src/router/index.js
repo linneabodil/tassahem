@@ -19,6 +19,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/NeedHome.vue')
   },
   {
+    path: '/animalcard',
+    name: 'animalcard',
+    component: () => import ('../components/AnimalCard.vue')
+  },
+  {
     path: '/hittat-hem',
     name: 'found-home',
     component: () => import('../views/FoundHome.vue')
