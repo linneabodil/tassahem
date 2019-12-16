@@ -3,17 +3,14 @@
     <h1>{{ rubrik }}</h1>
     <p>
       {{ info }}
-    </p>
-    <router-link :to="'/' + btn">
-      <button class="more"><h2>Läs Mer</h2></button>
-    </router-link> 
+    </p> 
   </div>
 </template>
 
 
 <script>
 export default {
-  name: 'TextBox',
+  name: 'NoButtonTextBox',
   props: {
     rubrik: String,
     info: String,
@@ -21,7 +18,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped lang="scss">
 
