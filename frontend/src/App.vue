@@ -21,6 +21,6 @@ import Nav from '@/components/Nav.vue'
 
 <style lang="scss">
 
-@import './scss/main.min.css';
+@import './scss/main.scss';
 
 </style>
