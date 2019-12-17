@@ -1,8 +1,13 @@
+@import './base/typography.scss';
+
 @import './components/animal-list.scss';
 @import './components/animal.scss';
 @import './components/text-box.scss';
 @import './components/nav.scss';
 
 @import './views/start.scss';
+@import './views/need-home.scss';
 
-
+body {
+  margin-top: 100px;
+}
