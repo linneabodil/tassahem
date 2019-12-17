@@ -31,3 +31,4 @@ app.listen(port, () => {
 app.route('/animals')
 .get(animal.get)
 .post(animal.post)
+.put(animal.put)
