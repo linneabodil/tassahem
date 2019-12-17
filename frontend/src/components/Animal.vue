@@ -2,7 +2,10 @@
   <li class="animal" @click="selectAnimal(animal)">
     <img class="animal__img" :src="animal.img" alt="Bild på djuret som söker hem.">
     <div class="animal__text-container" :class="animal.category">
-      <h2 class="animal__name">{{ animal.name }}, {{ animal.born.slice(0,10) }}</h2>
+      <div class="animal__name">
+        <h2>{{ animal.name }}</h2>
+        <h3>{{ animal.born.slice(0,10) }}</h3>
+      </div>
       <div class="animal__icons">
         <img :src="require('../assets/' + animal.category + '.svg')" alt="">
         <img :src="require('../assets/' + animal.gender + '.svg')" alt="">
