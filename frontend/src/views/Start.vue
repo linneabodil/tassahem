@@ -48,7 +48,7 @@
 
       <img class="picture" alt="Dog walker" src="../assets/img/dogwalker.jpg">
 
-      <TextBox style="color: black; background-color: white;" 
+      <TextBox style="background-color: white;" 
       rubrik="Våra solskenshistorier" 
       info="Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
@@ -81,16 +81,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-#hero {
-  height: 90vh;
-  width: 100%;
-  object-fit: cover;  
-}
-.picture{
-  height: 400px;
-  width: 100%;
-  object-fit: cover;
-}
 
 </style>
