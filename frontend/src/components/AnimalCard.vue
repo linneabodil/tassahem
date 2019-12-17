@@ -12,6 +12,7 @@
       <p>{{ animal.description }}</p>
       <p>Behov:</p><p class="needs__opt">{{ animal.needs.toString() }}</p>
     </div>
+    <p @click="$router.push(`/AnimalEdit/${animal._id}`)">Redigera</p>
     </aside>
 </template>
 
