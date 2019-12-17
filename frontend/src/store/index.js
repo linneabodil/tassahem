@@ -7,7 +7,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     animal: {},
-    animals: []
+    animals: [],
+    loggedInUser: ""
   },
   mutations: {
     selectAnimal(state, animal) {
@@ -15,9 +16,13 @@ export default new Vuex.Store({
     },
     setAnimals(state, animals) {
       state.animals = animals;
+    },
+    setLoggedInUser(state, user) {
+      state.loggedInUser = user;
     }
   },
   actions: {
+    // animals
     async getAllAnimals(ctx){
       let animals = await axios.get('http://localhost:3000/animals')
       await ctx.commit('setAnimals', animals.data);
@@ -28,6 +33,19 @@ export default new Vuex.Store({
     async editAnimal(ctx, animal) {
       await axios.put('http://localhost:3000/animals/', animal)
       ctx.dispatch('getAllAnimals')
+    },
+    // users
+    async signUp(ctx, userInfo) {
+      await axios.post('http://localhost:3000/users', userInfo);
+    },
+    async login(ctx, userInfo) {
+      try {
+        let verify = await axios.post('http://localhost:3000/verify', userInfo);
+        ctx.commit('setLoggedInUser', verify.data.username)
+      }
+      catch (err) {
+        alert(err)
+      }
     }
   },
   modules: {
@@ -42,6 +60,9 @@ export default new Vuex.Store({
           animal => animal._id == id
         )[0]
       }
+    },
+    getLoggedInUser(state){
+      return state.loggedInUser;
     }
   }
 })
