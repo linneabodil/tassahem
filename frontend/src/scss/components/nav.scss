@@ -84,6 +84,12 @@ span {
 
   a {
     text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    color: $pink;
+    transition: .5s;
   }
 
   li {
@@ -93,9 +99,9 @@ span {
   }
 }
 
-.router-link-active {
-  color: $pink;
-}
+  .router-link-active {
+    color: $pink;
+  }
 
 #menuToggle input:checked ~ ul {
   transform: none;
