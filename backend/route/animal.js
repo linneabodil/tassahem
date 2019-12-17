@@ -20,3 +20,15 @@ module.exports.post = async (req, res) => {
     res.status(500).send(err.stack);
   }
 };
+
+// update animals
+module.exports.put = async (req, res) => {
+  try {
+    res.status(200).send(await Animal.findOneAndUpdate({
+        _id: req.body._id
+      },
+      req.body))
+  } catch {
+    res.status(404).send(err.stack);
+  }
+}
