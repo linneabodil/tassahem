@@ -30,6 +30,10 @@ export default new Vuex.Store({
     async createAnimal(ctx, animal) {
       await axios.post('http://localhost:3000/animals', animal);
     },
+    async editAnimal(ctx, animal) {
+      await axios.put('http://localhost:3000/animals/', animal)
+      ctx.dispatch('getAllAnimals')
+    },
     // users
     async signUp(ctx, userInfo) {
       await axios.post('http://localhost:3000/users', userInfo);
@@ -49,6 +53,13 @@ export default new Vuex.Store({
   getters: {
     getAnimals(state){
       return state.animals;
+    },
+    getAnimalById(state){
+      return (id) => {
+        return state.animals.filter(
+          animal => animal._id == id
+        )[0]
+      }
     },
     getLoggedInUser(state){
       return state.loggedInUser;

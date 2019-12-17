@@ -21,8 +21,13 @@ const routes = [
   {
     path: '/animalcard',
     name: 'animalcard',
-    component: () => import ('../components/AnimalCard.vue')
-  },
+    component: () => import ('../components/AnimalCard.vue'),
+  },    
+  {
+    path: '/AnimalEdit/:id',
+    name: 'AnimalEdit',
+    component: () => import ('../components/AnimalEdit.vue')
+  }, 
   {
     path: '/hittat-hem',
     name: 'found-home',
