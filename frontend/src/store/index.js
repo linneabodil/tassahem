@@ -8,7 +8,14 @@ export default new Vuex.Store({
   state: {
     animal: {},
     animals: [],
-    loggedInUser: ""
+    loggedInUser: "",
+    authOptions: {
+      params: {
+        headers: {
+          authorization: `Bearer ${sessionStorage.getItem("authentic")}`
+        }
+      }
+    },
   },
   mutations: {
     selectAnimal(state, animal) {
@@ -42,6 +49,7 @@ export default new Vuex.Store({
       try {
         let verify = await axios.post('http://localhost:3000/verify', userInfo);
         ctx.commit('setLoggedInUser', verify.data.username)
+        sessionStorage.setItem("authentic", verify.data.authToken)
       }
       catch (err) {
         alert(err)

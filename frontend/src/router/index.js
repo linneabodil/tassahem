@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Start from '../views/Start.vue'
+import auth from './auth';
 
 Vue.use(VueRouter)
 
@@ -22,12 +23,12 @@ const routes = [
     path: '/animalcard',
     name: 'animalcard',
     component: () => import ('../components/AnimalCard.vue'),
-  },    
+  },
   {
     path: '/AnimalEdit/:id',
     name: 'AnimalEdit',
     component: () => import ('../components/AnimalEdit.vue')
-  }, 
+  },
   {
     path: '/hittat-hem',
     name: 'found-home',
@@ -46,7 +47,8 @@ const routes = [
   {
     path: '/admin',
     name: 'admin',
-    component: () => import('../views/Admin.vue')
+    component: () => import('../views/Admin.vue'),
+    meta: { requiresAdmin: true },
   },
   {
     path: '/logga-in',
@@ -57,6 +59,16 @@ const routes = [
 
 const router = new VueRouter({
   routes
-})
+});
 
-export default router
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAdmin) && !auth.isAuthenticated()) {
+    next({
+      path: '/logga-in'
+    });
+  } else {
+    next();
+  }
+});
+
+export default router;
