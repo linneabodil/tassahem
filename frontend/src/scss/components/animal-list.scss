@@ -1,5 +1,10 @@
 .animal-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: .5rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2.5rem;
+  padding: 2rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

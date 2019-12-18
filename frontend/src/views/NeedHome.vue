@@ -1,5 +1,6 @@
 <template>
   <div class="need-home">
+    <h2 class="page-heading">Husdjur utan hus</h2>
     <AnimalList :animals="animals" />
   </div>
 </template>
@@ -12,10 +13,11 @@ export default {
   components: {
     AnimalList
   },
-  computed:{
+  computed: {
     animals() {
       let animals = this.$store.getters.getAnimals;
-      return animals;
+      let seekingAnimals = animals.filter(animal => animal.status == "seeking")
+      return seekingAnimals;
     }
   }
 }

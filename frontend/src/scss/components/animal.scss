@@ -1,17 +1,21 @@
 .animal {
-  height: 300px;
+  box-sizing: border-box;
   list-style: none;
+  padding: 0;
 
   &__img {
     width: 100%;
+    height: 25rem;
+    object-fit: cover;
   }
 
   &__text-container {
     margin-top: -4px;
-    padding: .5rem 1rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: White;
 
     &.dog {
       background: #4B8E8D;
@@ -21,13 +25,21 @@
     }
 
     .animal__name {
-      font-family: 'Bebas Neue';
-      letter-spacing: 2px;
-      color: White;
+      // display: flex;
+      // align-items: baseline;
+
+      h2 {
+        font-size: 2rem;
+        margin: .3rem 0 0;
+      }
+      h3 {
+        margin: 0 0 .5rem;
+      }
     }
 
     .animal__icons {
       display: block;
+      align-self: flex-start;
 
       img {
         margin: 5px;
