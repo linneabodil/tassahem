@@ -1,7 +1,10 @@
 <template>
   <main class="animalEdit">
-    <h3>Redigera Djur</h3>
     <section>
+      <img class="__photo" :src="animal.img" alt="Bild på djur">
+    </section>
+    <div class="__section">
+      <h3>Redigera Djur</h3>
       <section>
         <label>Namn</label>
         <input type="text" placeholder="namn" v-model="animal.name">
@@ -11,30 +14,31 @@
         <input type="text" placeholder="xxxx-xx-xx" v-model="animal.born">
       </section>
       <br>
+      <section>
         <label>Typ:</label>
         <input type="radio" id="cat" value="cat" v-model="animal.category">
         <label for="female">Katt</label>
         <input type="radio" id="dag" value="dog" v-model="animal.category">
         <label for="male">Hund</label>
-      <br>
+        <br>
       </section>
       <section>
-      <label>Kön:</label>
+        <label>Kön:</label>
         <input type="radio" id="female" value="female" v-model="animal.gender">
         <label for="female">Tjej</label>
         <input type="radio" id="male" value="male" v-model="animal.gender">
         <label for="male">Kille</label>
-      <br>
+        <br>
       </section>
       <section>
         <label>Beskrivning</label>
         <input type="text" placeholder="beskrivning" v-model="animal.description">
       </section>
       <select v-model="animal.needs" multiple>
-      <option>Utevistelse</option>
-      <option>Hem utan barn</option>
-      <option>Kattkompis</option>
-      <option>Hundkompis</option>
+        <option>Utevistelse</option>
+        <option>Hem utan barn</option>
+        <option>Kattkompis</option>
+        <option>Hundkompis</option>
       </select>
       <h1>Fokus på denna sektionen</h1>
       <label>Status:</label>
@@ -42,6 +46,7 @@
         <option value="seeking">Söker hem</option>
         <option value="found">Hittat hem</option>
       </select>
+    </div>
     <section>
       <a href="#" class="btn-edit" @click="editAnimal">Spara</a>
     </section>
@@ -50,23 +55,20 @@
 
 <script>
 export default {
-  name: 'AnimalEdit',
+  name: "AnimalEdit",
   computed: {
     animal() {
-      return this.$store.getters.getAnimalById(
-        this.$route.params.id
-      )
+      return this.$store.getters.getAnimalById(this.$route.params.id);
     }
   },
   methods: {
     editAnimal() {
-      this.$store.dispatch('editAnimal', this.animal)
-      this.$router.push('/animalcard')
+      this.$store.dispatch("editAnimal", this.animal);
+      this.$router.push("/animalcard");
     }
   }
-}
+};
 </script>
 
 <style>
-
 </style>
