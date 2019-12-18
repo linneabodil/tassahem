@@ -2,14 +2,11 @@ $petrol: #4B8E8D;
 $pink: #C3377E;
 $orange: #F59039; 
 
-*{
-  color: white;
-}
-
   .box{
     background: $petrol;
     text-align: center;
     padding: 2rem;
+    color: white;
     
     h1{
       font-family: Bebas Neue;
@@ -19,6 +16,7 @@ $orange: #F59039;
     h2{
       font-family: Bebas Neue;
       font-size: 24px;
+      color: white;
     }
 
     p{

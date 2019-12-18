@@ -4,7 +4,7 @@
       <img id="hero" alt="Dogs" src="../assets/img/hero.jpg">
     </picture>
 
-    <TextBox 
+    <TextBox style ="float: right;"
       rubrik="Vilka är vi?" 
       info="Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
@@ -18,7 +18,7 @@
       
       <img class="picture" alt="Wolf Dog" src="../assets/img/dog-wolf.jpg">
 
-      <TextBox style="font-color: black; background-color: white;"
+      <TextBox style="color: black; background-color: white; float: left;"
       rubrik="Dom fyrbenta vännerna" 
       info="Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
@@ -33,7 +33,7 @@
 
       <img class="picture" alt="Children and dog" src="../assets/img/children-dog.jpg">
 
-      <TextBox 
+      <TextBox style="float: right;"
       rubrik="Vill du låta någon tassa hem till dig?" 
       info="Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
@@ -48,7 +48,7 @@
 
       <img class="picture" alt="Dog walker" src="../assets/img/dogwalker.jpg">
 
-      <TextBox style="background-color: white;" 
+      <TextBox style="color: black; background-color: white; float: left" 
       rubrik="Våra solskenshistorier" 
       info="Nulla neque est a, lectus sociis natoque vestibulum. 
       Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
