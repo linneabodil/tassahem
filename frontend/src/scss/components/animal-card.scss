@@ -1,0 +1,28 @@
+.__photo {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.__section, {
+  padding: 0 2rem;
+
+  .dog {
+    color: #4B8E8D;
+  }
+
+  .cat {
+    color: #C3377E;
+
+  }
+  .needs__opt, .animalEdit {
+    display: flex;
+
+    p {
+      margin-right: .3rem;
+      padding: .5rem;
+      background-color: #FFE7D1;
+      text-align: center;
+    }
+  }
+}
