@@ -1,6 +1,7 @@
 <template>
   <div class="admin">
     <AnimalAdd />
+    <a href="btn" @click="logout()">Logga ut</a>
   </div>
 </template>
 
@@ -12,6 +13,12 @@ export default {
   name: 'admin',
   components: {
     AnimalAdd
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch('logout');
+      alert("utloggad..?")
+    }
   }
 }
 

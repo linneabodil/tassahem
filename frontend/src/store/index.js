@@ -26,6 +26,9 @@ export default new Vuex.Store({
     },
     setLoggedInUser(state, user) {
       state.loggedInUser = user;
+    },
+    removeLoggedInUser(state) {
+      state.loggedInUser = "";
     }
   },
   actions: {
@@ -50,6 +53,15 @@ export default new Vuex.Store({
         let verify = await axios.post('http://localhost:3000/verify', userInfo);
         ctx.commit('setLoggedInUser', verify.data.username)
         sessionStorage.setItem("authentic", verify.data.authToken)
+      }
+      catch (err) {
+        alert(err)
+      }
+    },
+    async logout(ctx) {
+      try {
+        ctx.commit('removeLoggedInUser', '')
+        sessionStorage.clear()
       }
       catch (err) {
         alert(err)
