@@ -15,9 +15,6 @@
         <p v-for="(need, index) in animal.needs" :key="index">{{need}}</p>
       </div>
     </div>
-    <div class="__btn-action">
-      <p class="btn btn-animal" @click="$router.push(`/AnimalEdit/${animal._id}`)">Redigera</p>
-    </div>
   </aside>
 </template>
 
@@ -32,33 +29,3 @@ export default {
   }
 };
 </script>
-
-<style scoped lang="scss">
-/* .animal__photo {
-  min-width: 3rem;
-}
-.animal {
-
-  &__card {
-    margin: 50px;
-
-  &__text {
-    &.dog {
-      color: #4B8E8D;
-    }
-    &.cat {
-      color: #C3377E;
-    }
-  }
-  img {
-    background-color: black;
-  }
-
-  .needs__opt {
-    background: peachpuff;
-    padding: .5rem;   
-  }
-}
-} */
-</style>
-

@@ -60,7 +60,7 @@ export default new Vuex.Store({
     },
     async logout(ctx) {
       try {
-        ctx.commit('removeLoggedInUser', '')
+        ctx.commit('removeLoggedInUser')
         sessionStorage.clear()
       }
       catch (err) {

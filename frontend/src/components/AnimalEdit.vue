@@ -11,7 +11,7 @@
       </section>
       <section>
         <label>Födelseår:</label>
-        <input type="text" placeholder="xxxx-xx-xx" v-model="animal.born">
+        <input type="date" placeholder="xxxx-xx-xx" v-model="animal.born">
       </section>
       <section>
         <label>Ras:</label>
@@ -54,7 +54,7 @@
     </div>
     <section class="__btn-action">
       <a href="#" class="btn btn-animal" @click="editAnimal">Spara</a>
-      <!-- <a href="#" class="btn-animal" @click="cancelNewAnimal">Avbryt</a> -->
+      <a href="#" class="btn btn-animal" @click="cancelEdit">Avbryt</a>
     </section>
   </main>
 </template>
@@ -70,7 +70,7 @@ export default {
   methods: {
     editAnimal() {
       this.$store.dispatch("editAnimal", this.animal);
-      this.$router.push("/");
+      this.$router.push("/admin");
     },
     clearInput() {
       this.animal.name = "";
@@ -83,9 +83,9 @@ export default {
       this.animal.status = "";
       this.animal.img = "";
     },
-    cancelNewAnimal() {
+    cancelEdit() {
       this.clearInput();
-      this.$router.push("/"); //vart ska man vilja gå?
+      this.$router.push("/admin");
     }
   }
 };

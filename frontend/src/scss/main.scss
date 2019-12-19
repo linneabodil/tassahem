@@ -5,9 +5,13 @@
 @import './components/text-box.scss';
 @import './components/nav.scss';
 @import './components/animal-card.scss';
+@import './components/animal-admin.scss';
 
 @import './views/start.scss';
 @import './views/need-home.scss';
+@import './views/login.scss';
+@import './views/desktop-start.scss';
+@import './views/admin.scss';
 @import './views/contact.scss';
 
 @import './views/desktop-start.scss';
@@ -15,5 +19,6 @@
 @import './views/desktop-information.scss';
 
 body {
-  margin-top: 100px;
+  margin: 0;
+  padding-top: 7rem;
 }

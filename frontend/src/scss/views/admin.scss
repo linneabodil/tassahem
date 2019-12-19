@@ -1,0 +1,37 @@
+.admin {
+  width: 80vw;
+  margin: auto;
+
+  @media screen and (min-width: 768px) {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+    }
+  }
+
+  .section {
+    margin: 1rem 0;
+
+   .seeking {
+      background: #4B8E8D;
+    }
+    &.found {
+      background: #FFE7D1;
+    }
+
+    .page-heading {
+      margin: 1rem;
+      padding: 1rem 0;
+    }
+  }
+
+  .addAnimal {
+    width: 100%;
+    background: #F59039;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
