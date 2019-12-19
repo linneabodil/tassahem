@@ -1,20 +1,21 @@
 <template>
   <div class="admin">
-    <a href="btn-logout" @click="logout()">Logga ut</a>
+    <a class="btn btn-black" @click="logout()">Logga ut</a>
+    <a class="btn btn-black" v-if="addAnimal" @click="exitAdd()">Avbryt</a>
     <main>
-      <div class="section">
-        <a class="addAnimal btn" href="#" @click="toggleAddAnimal()">Lägg till djur</a>
+      <div class="section" v-if="!addAnimal">
+        <a class="btn-add btn" href="#" @click="toggleAddAnimal()">Lägg till djur</a>
         <div class="seeking">
           <h2 class="page-heading">Söker hem</h2>
-          <AnimalListAdmin v-if="!addAnimal" :animals="seeking" />
+          <AnimalListAdmin :animals="seeking" />
         </div>
       </div>
-      <div class="section found">
+      <div class="section found" v-if="!addAnimal">
         <h2 class="page-heading">Har tassat hem</h2>
-        <AnimalListAdmin v-if="!addAnimal" :animals="found" />
+        <AnimalListAdmin :animals="found" />
       </div>
     </main>
-    <AnimalAdd v-if="addAnimal" />
+    <AnimalAdd class="animal-add" v-if="addAnimal" />
   </div>
 </template>
 
@@ -37,8 +38,12 @@ export default {
   methods: {
     logout() {
       this.$store.dispatch('logout');
+      this.$router.push("/logga-in");
     },
     toggleAddAnimal() {
+      this.addAnimal = !this.addAnimal;
+    },
+    exitAdd() {
       this.addAnimal = !this.addAnimal;
     }
   },

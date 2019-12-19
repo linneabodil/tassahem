@@ -68,8 +68,6 @@ export default new Vuex.Store({
       }
     }
   },
-  modules: {
-  },
   getters: {
     getAnimals(state){
       return state.animals;
