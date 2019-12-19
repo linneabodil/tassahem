@@ -1,0 +1,98 @@
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .img-field {
+    height: 100vh;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .input-fields {
+    background: rgba($color: Gray, $alpha: .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 5rem;
+
+    .section {
+      padding: 1.5rem;
+      width: 80vw;
+
+      h2 {
+        font-size: 2rem;
+        margin: 0;
+      }
+      label {
+        font-size: 1.1rem;
+        font-family: 'Bebas Neue';
+        letter-spacing: 1px;
+        display: inline-block;
+        margin-top: 1rem;
+      }
+      input {
+        background: none;
+        border: none;
+        border-bottom: 1.5px solid Black;
+        display: block;
+        width: 100%;
+        padding: .5rem;
+
+        &:focus {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .btn {
+    padding: 1rem 3rem;
+    font-family: 'Bebas Neue';
+    background: Black;
+    color: White;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .login-page {
+    display: flex;
+
+    .signup {
+      margin-top: 2rem;
+    }
+
+    .img-field {
+      flex: 1.5;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: unset;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .input-fields {
+      background: none;
+      flex: 1;
+      display: flex;
+      width: 50vw;
+      position: inherit;
+
+      section {
+        width: 60% !important;
+      }
+    }
+  }
+}
