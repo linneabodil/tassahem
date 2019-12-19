@@ -26,4 +26,10 @@ h1,h2,h3 {
     display: inline-block;
     font-size: 18px;
   }
+
+  &-black {
+    background: Black;
+    display: inline-block;
+    margin: 0 1rem 0 0;
+  }
 }

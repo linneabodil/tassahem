@@ -26,12 +26,16 @@
     }
   }
 
-  .addAnimal {
+  .btn-add {
     width: 100%;
     background: #F59039;
     display: inline-block;
     box-sizing: border-box;
     text-align: center;
     font-size: 2rem;
+  }
+
+  .animal-add {
+    margin-top: 1rem;
   }
 }
