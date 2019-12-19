@@ -3,7 +3,7 @@
     <img class="map" alt="Map" src="../assets/img/map.jpg">
     <div class="contact-text">
       <h1>Välkomna in och hälsa på oss</h1>
-      <h2>tassa in och hitta din föralltid vän</h2>
+      <h2>tassa hit och hitta din föralltid vän</h2>
       <p>
         Nulla neque est a, lectus sociis natoque vestibulum. 
         Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 

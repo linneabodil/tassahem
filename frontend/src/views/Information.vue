@@ -12,8 +12,8 @@
     Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
     condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."/>
 
-    <NoButtonTextBox class="wide" style="background: white; color: black;"
-    rubrik="Att tassa hem..." 
+    <NoButtonTextBox class="white" style="background: #fff; color:black;"
+    rubrik="Att tassa hem..."
     info="Nulla neque est a, lectus sociis natoque vestibulum. 
     Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
     Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim."/>

@@ -17,16 +17,11 @@
           <router-link to="/hittat-hem">Hittat hem</router-link>
         </li>
         <li>
-          <router-link to="/information">Senare problem</router-link>
+          <router-link to="/information">Att tassa hem</router-link>
         </li>
         <li>
           <router-link to="/kontakt">Kontakt</router-link>
         </li>
-        <li>
-          <router-link to="/admin">Admin</router-link>
-        </li>
-        <li>
-          <router-link to="/logga-in">Logga in</router-link></li>
       </ul>
     </div>
   </nav>
