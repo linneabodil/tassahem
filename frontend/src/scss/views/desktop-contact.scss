@@ -1,0 +1,21 @@
+@media (min-width: 600px) {
+  .contact {
+    width: 60%;
+    position: absolute;
+    top: 60%;
+    left: 2rem;
+    background: none;
+    
+    table {
+      width: 50%;
+      color: black;
+    }
+    .contact-table {
+      float: left;
+    }
+    
+    .opening-table {
+      float: right;
+    }
+  }
+}
