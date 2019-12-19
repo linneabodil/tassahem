@@ -100,7 +100,7 @@ span {
 }
 
   .router-link-active {
-    color: $pink;
+    color: $pink !important;
   }
 
 #menuToggle input:checked ~ ul {
