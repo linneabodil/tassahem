@@ -5,6 +5,7 @@
 @import './components/text-box.scss';
 @import './components/nav.scss';
 @import './components/animal-card.scss';
+@import './components/animal-admin.scss';
 
 @import './views/start.scss';
 @import './views/need-home.scss';
@@ -14,4 +15,5 @@
 
 body {
   margin: 0;
+  padding-top: 7rem;
 }

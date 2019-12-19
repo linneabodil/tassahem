@@ -1,17 +1,26 @@
 <template>
   <div class="admin">
-    <a href="#" @click="toggleAddAnimal()">Lägg till djur</a>
-    <AnimalAdd v-if="addAnimal" class="add" />
-    <AnimalList class="seeking" :animals="seeking" />
-    <AnimalList class="found" :animals="found" />
-    <a href="btn" @click="logout()">Logga ut</a>
-
+    <a href="btn-logout" @click="logout()">Logga ut</a>
+    <main>
+      <div class="section">
+        <a class="addAnimal btn" href="#" @click="toggleAddAnimal()">Lägg till djur</a>
+        <div class="seeking">
+          <h2 class="page-heading">Söker hem</h2>
+          <AnimalListAdmin v-if="!addAnimal" :animals="seeking" />
+        </div>
+      </div>
+      <div class="section found">
+        <h2 class="page-heading">Har tassat hem</h2>
+        <AnimalListAdmin v-if="!addAnimal" :animals="found" />
+      </div>
+    </main>
+    <AnimalAdd v-if="addAnimal" />
   </div>
 </template>
 
 <script>
 
-import AnimalList from '../components/AnimalList.vue'
+import AnimalListAdmin from '../components/AnimalListAdmin.vue'
 import AnimalAdd from '../components/AnimalAdd.vue';
 
 export default {
@@ -22,7 +31,7 @@ export default {
     }
   },
   components: {
-    AnimalList,
+    AnimalListAdmin,
     AnimalAdd
   },
   methods: {
