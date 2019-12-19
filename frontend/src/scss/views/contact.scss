@@ -6,6 +6,7 @@
   display: inline-block;
   opacity: .3;
 }
+
 .contact-text{
   width: 70vw;
   position: absolute;
@@ -15,6 +16,7 @@
     margin-top: 2rem;
   }
 }
+
 .contact {
   width: 100%;
   padding-top: 1rem;
@@ -26,16 +28,17 @@
     margin: auto;
     padding-bottom: 2rem;
 
-  h3 {
-    margin: 0;
-  }
-  td{
-    width: 10%;  
-  }
+    h3 {
+      margin: 0;
+    }
+    td{
+      width: 10%;  
+    }
 
-  th {
-    text-align: left;
-  }
+    th {
+      text-align: left;
+      color: $orange;
+    }
 
-}
+  }
 }
