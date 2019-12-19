@@ -1,0 +1,44 @@
+.map {
+  width: 100vw;
+  height: 80vh;
+  object-fit: cover;
+  position: relative;
+  display: inline-block;
+  opacity: .3;
+}
+
+.contact-text{
+  width: 70vw;
+  position: absolute;
+  margin-left: 2rem;
+  top: 20%; 
+    p {
+    margin-top: 2rem;
+  }
+}
+
+.contact {
+  width: 100%;
+  padding-top: 1rem;
+  background: #C3377E;
+
+  table {
+    width: 75%;
+    color: white;
+    margin: auto;
+    padding-bottom: 2rem;
+
+    h3 {
+      margin: 0;
+    }
+    td{
+      width: 10%;  
+    }
+
+    th {
+      text-align: left;
+      color: $orange;
+    }
+
+  }
+}
