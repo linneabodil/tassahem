@@ -5,28 +5,28 @@
     </picture>
 
     <TextBox style ="float: right;"
-      rubrik="Vilka är vi?" 
-      info="Nulla neque est a, lectus sociis natoque vestibulum. 
-      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
-      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+      rubrik="Vilka är vi?"
+      info="Nulla neque est a, lectus sociis natoque vestibulum.
+      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant.
+      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim
       condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae.
-      Nulla neque est a, lectus sociis natoque vestibulum. 
-      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
-      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+      Nulla neque est a, lectus sociis natoque vestibulum.
+      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant.
+      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim
       condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."
       btn="information"/>
-      
+
       <img class="picture" alt="Wolf Dog" src="../assets/img/dog-wolf.jpg">
 
       <TextBox style="color: black; background-color: white; float: left;"
-      rubrik="Dom fyrbenta vännerna" 
-      info="Nulla neque est a, lectus sociis natoque vestibulum. 
-      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
-      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+      rubrik="Dom fyrbenta vännerna"
+      info="Nulla neque est a, lectus sociis natoque vestibulum.
+      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant.
+      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim
       condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae.
-      Nulla neque est a, lectus sociis natoque vestibulum. 
-      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
-      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+      Nulla neque est a, lectus sociis natoque vestibulum.
+      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant.
+      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim
       condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."
       btn="soker-hem"
       />
@@ -34,29 +34,29 @@
       <img class="picture" alt="Children and dog" src="../assets/img/children-dog.jpg">
 
       <TextBox style="float: right;"
-      rubrik="Vill du låta någon tassa hem till dig?" 
-      info="Nulla neque est a, lectus sociis natoque vestibulum. 
-      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
-      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+      rubrik="Vill du låta någon tassa hem till dig?"
+      info="Nulla neque est a, lectus sociis natoque vestibulum.
+      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant.
+      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim
       condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae.
-      Nulla neque est a, lectus sociis natoque vestibulum. 
-      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
-      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+      Nulla neque est a, lectus sociis natoque vestibulum.
+      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant.
+      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim
       condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."
       btn="kontakt"
       />
 
       <img class="picture" alt="Dog walker" src="../assets/img/dogwalker.jpg">
 
-      <TextBox style="color: black; background-color: white; float: left" 
-      rubrik="Våra solskenshistorier" 
-      info="Nulla neque est a, lectus sociis natoque vestibulum. 
-      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
-      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+      <TextBox style="color: black; background-color: white; float: left"
+      rubrik="Våra solskenshistorier"
+      info="Nulla neque est a, lectus sociis natoque vestibulum.
+      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant.
+      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim
       condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae.
-      Nulla neque est a, lectus sociis natoque vestibulum. 
-      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant. 
-      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim 
+      Nulla neque est a, lectus sociis natoque vestibulum.
+      Nulla pharetra vivamus feugiat quis venenatis, habitasse habitant.
+      Amet sit nunc libero libero. Elementum sed nullam proin dui, viverra enim
       condimentum id commodo. Vitae vel purus volutpat dolor, arcu vitae."
       btn="hittat-hem"
       />
@@ -66,10 +66,8 @@
 
 </template>
 
-
-
 <script>
-// @ is an alias to /src
+
 import TextBox from '@/components/TextBox.vue'
 
 export default {
@@ -77,9 +75,5 @@ export default {
   components: {
     TextBox
   }
-} 
+}
 </script>
-
-<style scoped lang="scss">
-
-</style>
