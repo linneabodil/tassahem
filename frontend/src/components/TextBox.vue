@@ -5,8 +5,8 @@
       {{ info }}
     </p>
     <router-link :to="'/' + btn">
-      <button class="more"><h2>Läs Mer</h2></button>
-    </router-link> 
+      <button class="more btn"><h2>Läs Mer</h2></button>
+    </router-link>
   </div>
 </template>
 
@@ -21,8 +21,3 @@ export default {
   }
 }
 </script>
-
-
-<style scoped lang="scss">
-
-</style>
